@@ -1,7 +1,7 @@
 Tencent Cloud DNS (DNSPod) module for Caddy
 ===========================
 
-This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with Tencent Cloud (as is <https://www.tengcentcloud.com> or <https://cloud.tencent.com>) accounts.
+This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with Tencent Cloud (as is <https://www.tencentcloud.com> or <https://cloud.tencent.com>) accounts.
 
 ## Caddy module name
 
