@@ -35,7 +35,7 @@ or with the Caddyfile:
 
 acme_dns tencentcloud {
   secret_id {env.TENCENTCLOUD_SECRET_ID}
-  SecretKey {env.TENCENTCLOUD_SECRET_KEY}
+  secret_key {env.TENCENTCLOUD_SECRET_KEY}
 }
 ```
 
