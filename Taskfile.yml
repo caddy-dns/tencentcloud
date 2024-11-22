@@ -1,0 +1,31 @@
+# https://taskfile.dev
+
+version: '3'
+
+
+
+tasks:
+  xcaddy:
+    desc: check xcaddy install
+    cmds:
+      - go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
+    status:
+      - command -v xcaddy
+
+  build:
+    desc: build caddy
+    deps:
+      - task: xcaddy
+    cmds:
+      - xcaddy build --with github.com/caddy-dns/tencentcloud=../tencentcloud
+
+  test:
+    desc: test
+    deps:
+      - task: build
+    cmds:
+      - ./caddy list-modules | grep dns.providers.tencentcloud && echo "tencentcloud module is installed" || (echo "tencentcloud module not found" && exit 1)
+
+  default:
+    cmds:
+      - task: test
