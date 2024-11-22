@@ -1,0 +1,28 @@
+name: Test
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          cache: true
+          go-version: 'stable'
+      - name: install task
+        run: |
+          echo "install task"
+          go install github.com/go-task/task/v3/cmd/task@latest
+      - name: install xcaddy
+        run: |
+          echo "install xcaddy"
+          go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
+      - name: build caddy & test
+        run: |
+          task
