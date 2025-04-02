@@ -1,11 +1,11 @@
 module github.com/caddy-dns/tencentcloud
 
 go 1.22
-toolchain go1.22.5
+toolchain go1.24.1
 
 require (
 	github.com/caddyserver/caddy/v2 v2.9.1
-	github.com/libdns/tencentcloud v1.2.0
+	github.com/libdns/tencentcloud v1.2.1
 )
 
 require (
