@@ -2,8 +2,6 @@
 
 version: '3'
 
-
-
 tasks:
   xcaddy:
     desc: check xcaddy install
